@@ -1,18 +1,24 @@
-* {
+/* {
 	border: 1px solid pink;
-}
+}*/
 
 body {
-	font-family: Arial, Helvetical, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	width: 1080px;
 	margin: 0px auto;
+	border: 2px solid black;
 }
 
-div.menu {
+nav.menu {
 	width: 100%;
 	height: 60px;
-	border: 1px solid black;
 	background-color: #93DFE5;
+	border-top: 1px solid #93DFE5;
+	border-bottom: 3px solid #3F8DA7;
+}
+
+span.new_dog_name {
+	font-weight: bold;
 }
 
 .dog_icon {
@@ -28,12 +34,13 @@ ul {
 
 li.menu {
 	float: right;
+	font-weight: 600;
 }
 
 li a {
 	color: black;
 	padding: 20px 10px;
-	margin: 10px;
+	margin: 8px;
 	text-decoration: none;
 }
 
@@ -46,34 +53,49 @@ li a {
 	background-position: 0% 80%;
 }
 
-.header_title {
+h1.header_title {
 	text-align: center;
 	color: white;
 	font-weight: normal;
+	margin-top: 0px;
+	font-size: 32px;
+}
+
+label {
+	font-weight: 600;
 }
 
 form.rename {
 	text-align: left;
 	margin-left: 30.5%;
-	margin-top: 25px;
+	margin-top: 15px;
 	color: white;
 }
 
 input.input_rename {
-	width: 360px;
-	height: 40px;
-	margin: 10px 0px;
-	border-radius: 3px;
+	width: 370px;
+	height: 47px;
+	margin: 10px 0;
+	border-radius: 2px;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
 }
 
 input.button_rename {
-	width: 364px;
-	height: 45px;
+	width: 370px;
+	height: 47px;
 	margin: 10px 0px;
 	color: black;
 	background-color: #93DFE5;
 	font-size: 20px;
-	border-radius: 3px;
+	border-radius: 2px;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .dog1 {
@@ -81,18 +103,24 @@ input.button_rename {
 	width: 170px;
 	height: 170px;
 	margin-left: 39%;
-	margin-top: 40px;
+	margin-top: 30px;
 	border-radius: 100px;
 	border: 4px solid #3F8DA7;
+}
+
+main.column_content {
+	width: 100%;
+	height: 640px;
 }
 
 .column_1, .column_2, .column_3 {
 	float: left;
 	width: 29%;
-	height: 500px;
+	height: 585px;
 	padding: 1%;
 	margin: 1%;
 	text-align: center;
+	position: relative;
 }
 
 .dog2, .dog3, .dog4 {
@@ -104,23 +132,43 @@ input.button_rename {
 	border: 4px solid #3F8DA7;
 }
 
-input.button {
-	width: 300px;
-	height: 45px;
-	color: white;
-	background-color: #3F8DA7;
-	font-size: 20px;
-	border-radius: 3px;
+h3.column {
+	font-size: 22px;
+	font-weight: 800;
 }
 
-div.footer {
-	width: 100%
-	height: 300px;
-	text-align: center;
-	color: white;
+p.column {
+	text-align: left;
+	font-weight: 600;
+	padding: 15px;
+}
+
+input.button {
 	background-color: #3F8DA7;
-	border: 2px solid black;
+	border-radius: 3px;
+	bottom: 0;
+	color: white;
+	font-size: 17px;
+	height: 45px;
+	left: 0;
+	position: absolute;
+	transform: translate(6%);
+	width: 300px;
+}
+
+.footer_container {
+	background-color: #3F8DA7;
 	clear: left;
+	color: white;
+	height: 180px;
+	text-align: center;
+	width: 100%;
+}
+
+h3.footer_title {
+	padding-top: 43px;
+	font-size: 17px;
+	font-weight: normal;
 }
 
 li.footer {
@@ -128,9 +176,9 @@ li.footer {
 	margin: 10px;
 }
 
-ul.footer {
-	width: 300px;
-	margin-left: 31.5%;
+ul.footer_list {
+	padding: 10px;
+	margin: 0px;
 }
 
 
