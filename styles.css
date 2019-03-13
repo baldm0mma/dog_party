@@ -57,8 +57,10 @@ h1.header_title {
 	text-align: center;
 	color: white;
 	font-weight: normal;
-	margin-top: 0px;
+	margin-left: 22%;
+	width: 50%;
 	font-size: 32px;
+	margin-top: 10px;
 }
 
 label {
@@ -68,7 +70,7 @@ label {
 form.rename {
 	text-align: left;
 	margin-left: 30.5%;
-	margin-top: 15px;
+	margin-top: 0;
 	color: white;
 }
 
