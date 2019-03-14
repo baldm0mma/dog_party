@@ -9,7 +9,7 @@ body {
 	border: 2px solid black;
 }
 
-nav.menu {
+.navigation {
 	width: 100%;
 	height: 60px;
 	background-color: #93DFE5;
@@ -17,27 +17,20 @@ nav.menu {
 	border-bottom: 3px solid #3F8DA7;
 }
 
-span.new_dog_name {
-	font-weight: bold;
-}
-
-.dog_icon {
+.navigation__img {
 	width: 45px;
 	height: 45px;
 	float: left;
 	margin: 5px 20px;
 }
 
-ul {
+.navigation__list__item {
+	float: right;
+	font-weight: 600;
 	list-style-type: none;
 }
 
-li.menu {
-	float: right;
-	font-weight: 600;
-}
-
-li a {
+.navigation__list__item a {
 	color: black;
 	padding: 20px 10px;
 	margin: 8px;
@@ -47,13 +40,19 @@ li a {
 .header {
 	width: 100%;
 	height: 465px;
-	background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/park.jpg");
+	background: url("images/park.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0% 80%;
 }
 
-h1.header_title {
+.header--darken {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header__title {
 	text-align: center;
 	color: white;
 	font-weight: normal;
@@ -63,18 +62,22 @@ h1.header_title {
 	margin-top: 10px;
 }
 
-label {
+.header__title--rename {
+	font-weight: bold;
+}
+
+.header__form__label {
 	font-weight: 600;
 }
 
-form.rename {
+.header__form {
 	text-align: left;
 	margin-left: 30.5%;
 	margin-top: 0;
 	color: white;
 }
 
-input.input_rename {
+.header__form__input {
 	width: 370px;
 	height: 47px;
 	margin: 10px 0;
@@ -82,25 +85,17 @@ input.input_rename {
 	border: none;
 	padding: 0;
 	cursor: pointer;
-	outline: inherit;
+	outline: none;
 }
 
-input.button_rename {
-	width: 370px;
-	height: 47px;
-	margin: 10px 0px;
+.header__form__input--button {
 	color: black;
 	background-color: #93DFE5;
 	font-size: 20px;
-	border-radius: 2px;
-	border: none;
-	padding: 0;
 	font: inherit;
-	cursor: pointer;
-	outline: inherit;
 }
 
-.dog1 {
+.header__img {
 	display: block;
 	width: 170px;
 	height: 170px;
@@ -110,12 +105,12 @@ input.button_rename {
 	border: 4px solid #3F8DA7;
 }
 
-main.column_content {
+.content {
 	width: 100%;
 	height: 640px;
 }
 
-.column_1, .column_2, .column_3 {
+.content__column {
 	float: left;
 	width: 29%;
 	height: 585px;
@@ -125,7 +120,7 @@ main.column_content {
 	position: relative;
 }
 
-.dog2, .dog3, .dog4 {
+.content__column__img {
 	display: block;
 	width: 170px;
 	height: 170px;
@@ -134,18 +129,18 @@ main.column_content {
 	border: 4px solid #3F8DA7;
 }
 
-h3.column {
+.content__column__title {
 	font-size: 22px;
 	font-weight: 800;
 }
 
-p.column {
+.content__column__text {
 	text-align: left;
 	font-weight: 600;
 	padding: 15px;
 }
 
-input.button {
+.content__column__button {
 	background-color: #3F8DA7;
 	border-radius: 3px;
 	bottom: 0;
@@ -156,9 +151,13 @@ input.button {
 	position: absolute;
 	transform: translate(6%);
 	width: 300px;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
 }
 
-.footer_container {
+.footer {
 	background-color: #3F8DA7;
 	clear: left;
 	color: white;
@@ -167,21 +166,22 @@ input.button {
 	width: 100%;
 }
 
-h3.footer_title {
+.footer__title {
 	padding-top: 43px;
 	font-size: 17px;
 	font-weight: normal;
 }
 
-li.footer {
+.footer__list {
+	padding: 10px;
+	margin: 0px;
+}
+
+.footer__list__item {
 	display: inline-block;
 	margin: 10px;
 }
 
-ul.footer_list {
-	padding: 10px;
-	margin: 0px;
-}
 
 
 
