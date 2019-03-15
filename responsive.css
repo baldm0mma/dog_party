@@ -1,0 +1,18 @@
+@media screen and (max-width: 1080px) {
+	body {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.content__column--1, 
+	.content__column--2 {
+		float: left;
+		width: 45.5%;
+		height: 585px;
+		padding: 1%;
+		margin: 1%;
+		text-align: center;
+		position: relative;
+	}
+}
