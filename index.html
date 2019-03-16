@@ -5,12 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Welcome to the Dog Party!</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<!-- Here I created a second stylesheet to link to with all of the responsive CSS. -->
 	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<!-- Below is the closest font-family option I could find for the comp. -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
 	<script src="main.js"></script>
 </head>
 <body>
+	<!-- I chose the <nav/> element here to be as symantically relevant as possible. -->
 	<nav class="navigation">
+		<!-- I had been reading BEM class naming, and below is my attempt. It felt a bit textually bloated (and I'm sure I created a number of superfluous classes), but it worked pretty well for my CSS selecting. -->
 		<img class="navigation__img" src="images/dog-icon.svg">
 		<ul class="navigation__list">
 			<li class="navigation__list__item"><a href="#">Facts From Dog</a></li>
@@ -18,49 +22,59 @@
 			<li class="navigation__list__item"><a href="#">How To Dog</a></li>
 		</ul>
 	</nav>
+	<!-- I chose the <header/> element here to be as symantically relevant as possible. -->
 	<header class="header">
 		<div class="header--darken">
-			<br>
-			<h1 class="header__title">A Site About <span id="header__title--rename">Some Dogs</span></h1>
-			<img class="header__img" src="images/dog1-sq.jpg">
-			<form class="header__form">
-				<label class="header__form__label">
-					Name
-				</label>
+			<div class="header__container">
 				<br>
-				<input class="header__form__input" id="header__form__input--text" type="text" name="new_dog_name">
-				<br>
-				<input onclick="userDogRename()" class="header__form__input header__form__input--button" type="button" value="Name This Dog">
-			</form>
+				<h1 class="header__title">A Site About <span id="header__title--rename">Some Dogs</span></h1>
+				<img class="header__img" id="js_change_dog" src="images/dog1-sq.jpg">
+				<form class="header__form">
+					<label class="header__form__label">
+						Name
+					</label>
+					<br>
+					<input class="header__form__input" id="header__form__input--text" type="text" name="new_dog_name">
+					<br>
+					<!-- I'm sure if integrating the js function call directly into my HTML is bad practice or not, but it's curently the only way I know how to do it. -->
+					<input onclick="userDogRename()" class="header__form__input header__form__input--button" type="button" value="Name This Dog">
+				</form>
+			</div>
 		</div>
 	</header>
+	<!-- I chose the <main/> element here to be as symantically relevant as possible. -->
 	<main class="content">
 		<div class="content__column content__column--1">
 			<h3 class="content__column__title">How To Dog</h3>
 			<img class="content__column__img" src="images/dog2-sq.jpg">
 			<p class="content__column__text">Dat tungg tho pupperiono length boy. borkdrive aqua doggo. Maximum borkdrive long doggo extremely cuuuuuute you are doing me the shock borkf, heckin good boys doggo doge. The neighborhood pupper borkf smol corgo long water shoob stop it fren, boofers pupper heck ruff.</p>
-			<input class="content__column__button" onclick="window.open('https://www.youtube.com/watch?v=_w4x6fMCbpI')" type="button" value="How">
+			<!-- Here I wrapped the <p/> tags in the <a/> tags so that the whole element space would be clickable. -->
+			<a href="https://www.youtube.com/watch?v=_w4x6fMCbpI" target="_blank"><p class="content__column__button content__column__button--1" >How</p></a>
+			<!-- I began with the input button you see below, but decided to style 3 <p/> elements instead, as I thought they'ed possibly be easier to position and manipulate. I removed the 2 others to clean up my code. -->
+			<!-- <input class="content__column__button" onclick="window.open('https://www.youtube.com/watch?v=_w4x6fMCbpI')" type="button" value="How"> -->
 		</div>
 		<div class="content__column content__column--2">
 			<h3 class="content__column__title">What Is Dogs</h3>
 			<img class="content__column__img" src="images/dog3-sq.jpg">
 			<p class="content__column__text">Long doggo smol borking doggo with a long snoot for pats pupperino h*ck heckin angery woofer shoober aqua doggo heck, doggo aqua doggo most angery pupper I have ever seen heckin angery woffer pupper. ruff adorable doggo very hand that feed shibe. Extremely cuuuuuute corgo waggy wags stop it fren.</p>
-			<input class="content__column__button" onclick="window.open('https://www.dkfindout.com/us/animals-and-nature/dogs/what-is-dog/')" type="button" value="What">
+			<a href="https://www.dkfindout.com/us/animals-and-nature/dogs/what-is-dog/" target="_blank"><p class="content__column__button content__column__button--2">What</p></a>
 		</div>
 		<div class="content__column content__column--3">
 			<h3 class="content__column__title">Facts From Dog</h3>
 			<img class="content__column__img" src="images/dog4-sq.jpg">
 			<p class="content__column__text">Most angery pupper I have every seen such treat heck, dat tungg tho. You are doin me a convern shibe such treat ruff heck, stop it fren ur givin me a spook. Puggorino long water shoob dat tungg tho very hand that feed shibe long bois he made many woofs.</p>
-			<input class="content__column__button" onclick="window.open('https://www.cesarsway.com/dog-behavior/innocuous-behaviors/10-facts-about-dogs')" type="button" value="Facts">
+			<a href="https://www.cesarsway.com/dog-behavior/innocuous-behaviors/10-facts-about-dogs" target="_blank"><p class="content__column__button content__column__button--3">Facts</p></a>
 		</div>
 	</main>
+	<!-- I chose the <footer/> element here to be as symantically relevant as possible. -->
 	<footer class="footer">
 		<h3 class="footer__title">Learn About Dogs Online</h3>
 		<ul class="footer__list">
-			<li class="footer__list__item"><img src="images/twitter.svg" alt="Connect on Twitter"></li>
-			<li class="footer__list__item"><img src="images/instagram.svg" alt="Connect on Instagram"></li>
-			<li class="footer__list__item"><img src="images/facebook.svg" alt="Connect on Facebook"></li>
-			<li class="footer__list__item"><img src="images/linkedin.svg" alt="Connect on LinkedIn"></li>
+			<!-- Here I have all of the footer icons simply `hrefing` to the top. -->
+			<li class="footer__list__item"><a href="#"><img src="images/twitter.svg" alt="Connect on Twitter"></a></li>
+			<li class="footer__list__item"><a href="#"><img src="images/instagram.svg" alt="Connect on Instagram"></a></li>
+			<li class="footer__list__item"><a href="#"><img src="images/facebook.svg" alt="Connect on Facebook"></a></li>
+			<li class="footer__list__item"><a href="#"><img src="images/linkedin.svg" alt="Connect on LinkedIn"></a></li>
 		</ul>
 	</footer>
 </body>

@@ -1,18 +1,147 @@
+/*Since I began with a 1080px width, I needed to 
+re-assign the width to 100% when the viewport
+was squeezed below 1080px, so that the innate
+resposiveness would kick in.*/
 @media screen and (max-width: 1080px) {
+	
 	body {
 		width: 100%;
 	}
 }
 
+/*1000px was the first threshold for me. It just appeared
+to be the first point when the 3 columns begin looking a
+little too squished. This is where I reduced 3 columns to 2,
+and also began redicing the size of the header elements.*/
 @media screen and (max-width: 1000px) {
+	
+	.header__container {
+		margin: auto;
+		text-align: center;
+		width: 80%;
+	}
+
+	/*In the new viewport, I decided to simply center the
+	header elements relative to the center of the document.*/
+	.header__title {
+		color: white;
+		font-size: 32px;
+		font-weight: normal;
+		margin: auto;
+		text-align: center;
+		width: 100%;
+	}
+
+	.header__form {
+		color: white;
+		margin: auto;
+		text-align: center;
+	}
+
+	.header__form__label {
+		display: inline-block;
+		text-align: left;
+		width: 340px;
+	}
+
+	.header__form__input {
+		height: 40px;
+	}
+
+	#header__form__input--text {
+		width: 312px;
+	}
+
+	.header__form__input--button {
+		width: 344px;
+	}
+
+	.header__img {
+		margin: 30px auto 0px;
+	}
+
+	/*This is the CSS changing from 3 columns to 2.*/
 	.content__column--1, 
 	.content__column--2 {
 		float: left;
-		width: 45.5%;
-		height: 585px;
-		padding: 1%;
+		height: 580px;
 		margin: 1%;
+		padding: 1%;
 		text-align: center;
-		position: relative;
+		width: 45.5%;
+	}
+
+	.content__column--3 {
+		clear: both;
+		height: 445px;
+		margin: auto;
+		padding: 1%;
+		text-align: center;
+		width: 100%;
+	}
+
+	.content__column__button--1 {
+		margin-left: 10%;
+	}
+	.content__column__button--2 {
+		margin-left: 11%;
+	}
+
+	.content__column__button--3 {
+		margin-left: 32%;
 	}
 }
+
+/*The next visually "natural" break for me was at
+850px. And this was purely because the vertical centering
+of the content column buttons were misbehaving.*/
+@media screen and (max-width: 850px) {
+	
+	.content__column__button--1 {
+		margin-left: 5%;
+	}
+	.content__column__button--2 {
+		margin-left: 6%;
+	}
+
+	.content__column__button--3 {
+		margin-left: 28%;
+	}
+}
+
+/*Here is the transition from 2 columns to 1. As
+well as a static width.*/
+@media screen and (max-width: 675px) {
+	.content {
+		height: 100%;
+		width: 500px;
+	}
+
+	.content__column {
+		height: 520px;
+		margin: 0 11%;
+		width: 100%;
+	}
+	
+	.content__column__text {
+		height: 200px;
+	}
+
+	.content__column__button {
+		margin-left: 20%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
