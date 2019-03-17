@@ -1,5 +1,5 @@
-/*Since I began with a 1080px width, I needed to 
-re-assign the width to 100% when the viewport
+/*Since I began with a 1080px width for the body, 
+I needed to re-assign the width to 100% when the viewport
 was squeezed below 1080px, so that the innate
 resposiveness would kick in.*/
 @media screen and (max-width: 1080px) {
@@ -112,6 +112,7 @@ of the content column buttons were misbehaving.*/
 /*Here is the transition from 2 columns to 1. As
 well as a static width.*/
 @media screen and (max-width: 675px) {
+
 	.content {
 		height: 100%;
 		width: 500px;

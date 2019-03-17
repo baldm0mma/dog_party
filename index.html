@@ -9,7 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="responsive.css">
 	<!-- Below is the closest font-family option I could find for the comp. -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
-	<script src="main.js"></script>
 </head>
 <body>
 	<!-- I chose the <nav/> element here to be as symantically relevant as possible. -->
@@ -17,9 +16,9 @@
 		<!-- I had been reading BEM class naming, and below is my attempt. It felt a bit textually bloated (and I'm sure I created a number of superfluous classes), but it worked pretty well for my CSS selecting. -->
 		<a href="https://turing.io/"><img class="navigation__img" src="images/dog-icon.svg"></a>
 		<ul class="navigation__list">
-			<li class="navigation__list__item"><a href="#">Facts From Dog</a></li>
-			<li class="navigation__list__item"><a href="#">What Is Dogs</a></li>
-			<li class="navigation__list__item"><a href="#">How To Dog</a></li>
+			<li class="navigation__list__item"><a href="#jump_to_col3">Facts From Dog</a></li>
+			<li class="navigation__list__item"><a href="#jump_to_col2">What Is Dogs</a></li>
+			<li class="navigation__list__item"><a href="#jump_to_col1">How To Dog</a></li>
 		</ul>
 	</nav>
 	<!-- I chose the <header/> element here to be as symantically relevant as possible. -->
@@ -44,7 +43,7 @@
 	</header>
 	<!-- I chose the <main/> element here to be as symantically relevant as possible. -->
 	<main class="content">
-		<div class="content__column content__column--1">
+		<div class="content__column content__column--1" id="jump_to_col1">
 			<h3 class="content__column__title">How To Dog</h3>
 			<img class="content__column__img" src="images/dog2-sq.jpg">
 			<p class="content__column__text">Dat tungg tho pupperiono length boy. borkdrive aqua doggo. Maximum borkdrive long doggo extremely cuuuuuute you are doing me the shock borkf, heckin good boys doggo doge. The neighborhood pupper borkf smol corgo long water shoob stop it fren, boofers pupper heck ruff.</p>
@@ -53,13 +52,13 @@
 			<!-- I began with the input button you see below, but decided to style 3 <p/> elements instead, as I thought they'ed possibly be easier to position and manipulate. I removed the 2 others to clean up my code. -->
 			<!-- <input class="content__column__button" onclick="window.open('https://www.youtube.com/watch?v=_w4x6fMCbpI')" type="button" value="How"> -->
 		</div>
-		<div class="content__column content__column--2">
+		<div class="content__column content__column--2" id="jump_to_col2">
 			<h3 class="content__column__title">What Is Dogs</h3>
 			<img class="content__column__img" src="images/dog3-sq.jpg">
 			<p class="content__column__text">Long doggo smol borking doggo with a long snoot for pats pupperino h*ck heckin angery woofer shoober aqua doggo heck, doggo aqua doggo most angery pupper I have ever seen heckin angery woffer pupper. ruff adorable doggo very hand that feed shibe. Extremely cuuuuuute corgo waggy wags stop it fren.</p>
 			<a href="https://www.dkfindout.com/us/animals-and-nature/dogs/what-is-dog/" target="_blank"><p class="content__column__button content__column__button--2">What</p></a>
 		</div>
-		<div class="content__column content__column--3">
+		<div class="content__column content__column--3" id="jump_to_col3">
 			<h3 class="content__column__title">Facts From Dog</h3>
 			<img class="content__column__img" src="images/dog4-sq.jpg">
 			<p class="content__column__text">Most angery pupper I have every seen such treat heck, dat tungg tho. You are doin me a convern shibe such treat ruff heck, stop it fren ur givin me a spook. Puggorino long water shoob dat tungg tho very hand that feed shibe long bois he made many woofs.</p>
@@ -77,5 +76,8 @@
 			<li class="footer__list__item"><a href="#"><img src="images/linkedin.svg" alt="Connect on LinkedIn"></a></li>
 		</ul>
 	</footer>
+	<script src="jquery.v3.3.1.dev"></script>
+	<!-- Most of the reading I have done suggests that linking the .js scripts is best accomplished before the closing <body/> tag. -->
+	<script src="main.js"></script>
 </body>
 </html>
