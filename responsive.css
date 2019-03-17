@@ -113,6 +113,10 @@ of the content column buttons were misbehaving.*/
 well as a static width.*/
 @media screen and (max-width: 675px) {
 
+	body {
+		width: 620px;
+	}
+
 	.content {
 		height: 100%;
 		width: 500px;

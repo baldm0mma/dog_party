@@ -10,3 +10,11 @@ function userDogRename() {
 		document.getElementById("header__title--rename").innerHTML = userInput;
 	}
 }
+
+// Below this comment is where I began playing with jQuery.
+
+$(function() {
+    $("#tooltip_1").tooltip();
+    $("#tooltip_2").tooltip();
+    $("#tooltip_2").tooltip();
+});
